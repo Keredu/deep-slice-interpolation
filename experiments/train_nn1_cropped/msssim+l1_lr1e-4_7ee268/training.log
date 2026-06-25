@@ -1,0 +1,161 @@
+2026-02-12 12:40:44 | INFO     | ================================================================================
+2026-02-12 12:40:44 | INFO     | TRAINING SESSION STARTED
+2026-02-12 12:40:44 | INFO     | ================================================================================
+2026-02-12 12:40:44 | INFO     | Transfer initialization active: loaded weights from experiments/train_nn1_cropped/msssim+l1_lr3e-4_9b7aea/epochs/18/weights.pth (source epoch 19)
+2026-02-12 12:40:44 | DEBUG    | Faulthandler enabled, writing to experiments/train_nn1_cropped/msssim+l1_lr1e-4_7ee268/crash_trace.txt
+2026-02-12 12:40:44 | INFO     | Starting training: epochs 1-300, experiment=msssim+l1_lr1e-4_7ee268
+2026-02-12 12:40:44 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 1/300 starting
+2026-02-12 12:40:44 | DEBUG    | Starting training epoch 1 with 1102 batches (batch_log_interval=220)
+2026-02-12 12:42:11 | DEBUG    |   Train batch 220/1102: loss=0.0539, time=[min=160.8, avg=339.0, max=38897.7]ms
+2026-02-12 12:42:54 | DEBUG    |   Train batch 440/1102: loss=0.0533, time=[min=161.3, avg=163.7, max=178.5]ms
+2026-02-12 12:43:37 | DEBUG    |   Train batch 660/1102: loss=0.0531, time=[min=161.6, avg=163.7, max=175.5]ms
+2026-02-12 12:44:20 | DEBUG    |   Train batch 880/1102: loss=0.0532, time=[min=161.5, avg=164.5, max=178.5]ms
+2026-02-12 12:45:03 | DEBUG    |   Train batch 1100/1102: loss=0.0534, time=[min=161.7, avg=164.6, max=179.1]ms
+2026-02-12 12:45:13 | DEBUG    | Training epoch 1 complete: avg_loss=0.0533, time=268.54s, avg_batch_time=199.0ms
+2026-02-12 12:45:13 | DEBUG    | Starting validation epoch 1 with 276 batches (batch_log_interval=55)
+2026-02-12 12:46:05 | DEBUG    |   Valid batch 55/276: loss=0.0590, time=[min=445.1, avg=526.7, max=4822.1]ms
+2026-02-12 12:46:53 | DEBUG    |   Valid batch 110/276: loss=0.0583, time=[min=445.2, avg=447.3, max=457.1]ms
+2026-02-12 12:47:40 | DEBUG    |   Valid batch 165/276: loss=0.0579, time=[min=444.7, avg=447.3, max=457.2]ms
+2026-02-12 12:48:28 | DEBUG    |   Valid batch 220/276: loss=0.0585, time=[min=445.0, avg=447.0, max=457.5]ms
+2026-02-12 12:49:17 | DEBUG    |   Valid batch 275/276: loss=0.0596, time=[min=445.5, avg=453.4, max=502.0]ms
+2026-02-12 12:49:18 | DEBUG    |   Per-crop SSIM: center=0.6961, corners=0.7649, edges=0.7328
+2026-02-12 12:49:18 | DEBUG    | Validation epoch 1 complete: avg_loss=0.0587, time=245.21s, avg_batch_time=464.3ms
+2026-02-12 12:49:18 | DEBUG    | Saving epochs CSV
+2026-02-12 12:49:18 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 1/300 completed: train_loss=0.0533, valid_loss=0.0587, best=inf, time=513.75s (train=268.54s, valid=245.21s), run_avg=513.75s (n=1)
+2026-02-12 12:49:18 | DEBUG    | Learning rate: 0.000100
+2026-02-12 12:49:18 | INFO     |   Metrics: ssim=0.7430, ms_ssim=0.8528, mae=0.0365, gradient_mae=0.1448, psnr=20.1722, ncc=189629218.8144
+2026-02-12 12:49:18 | INFO     | New best validation loss: 0.0587 (prev: inf)
+2026-02-12 12:49:18 | DEBUG    | Saving best model checkpoint to experiments/train_nn1_cropped/msssim+l1_lr1e-4_7ee268/epochs/0
+2026-02-12 12:49:19 | DEBUG    | Saving latest checkpoint
+2026-02-12 12:49:19 | DEBUG    | Stepping scheduler
+2026-02-12 12:49:19 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 2/300 starting
+2026-02-12 12:49:19 | DEBUG    | Starting training epoch 2 with 1102 batches (batch_log_interval=220)
+2026-02-12 12:50:09 | DEBUG    |   Train batch 220/1102: loss=0.0528, time=[min=163.1, avg=172.7, max=193.3]ms
+2026-02-12 12:50:52 | DEBUG    |   Train batch 440/1102: loss=0.0529, time=[min=162.5, avg=170.5, max=195.5]ms
+2026-02-12 12:51:36 | DEBUG    |   Train batch 660/1102: loss=0.0529, time=[min=163.2, avg=170.6, max=188.8]ms
+2026-02-12 12:52:19 | DEBUG    |   Train batch 880/1102: loss=0.0532, time=[min=162.9, avg=167.9, max=189.1]ms
+2026-02-12 12:53:03 | DEBUG    |   Train batch 1100/1102: loss=0.0533, time=[min=163.2, avg=170.2, max=192.2]ms
+2026-02-12 12:53:13 | DEBUG    | Training epoch 2 complete: avg_loss=0.0530, time=234.27s, avg_batch_time=170.4ms
+2026-02-12 12:53:13 | DEBUG    | Starting validation epoch 2 with 276 batches (batch_log_interval=55)
+2026-02-12 12:53:58 | DEBUG    |   Valid batch 55/276: loss=0.0590, time=[min=448.1, avg=451.0, max=472.2]ms
+2026-02-12 12:54:42 | DEBUG    |   Valid batch 110/276: loss=0.0582, time=[min=447.7, avg=450.1, max=473.5]ms
+2026-02-12 12:55:27 | DEBUG    |   Valid batch 165/276: loss=0.0579, time=[min=447.8, avg=450.1, max=477.1]ms
+2026-02-12 12:56:12 | DEBUG    |   Valid batch 220/276: loss=0.0585, time=[min=447.4, avg=450.5, max=473.7]ms
+2026-02-12 12:56:56 | DEBUG    |   Valid batch 275/276: loss=0.0595, time=[min=447.9, avg=450.5, max=475.7]ms
+2026-02-12 12:56:57 | DEBUG    |   Per-crop SSIM: center=0.6963, corners=0.7651, edges=0.7330
+2026-02-12 12:56:57 | DEBUG    | Validation epoch 2 complete: avg_loss=0.0586, time=224.14s, avg_batch_time=450.5ms
+2026-02-12 12:56:57 | DEBUG    | Saving epochs CSV
+2026-02-12 12:56:57 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 2/300 completed: train_loss=0.0530, valid_loss=0.0586, best=0.0587, time=458.41s (train=234.27s, valid=224.14s), run_avg=486.08s (n=2)
+2026-02-12 12:56:57 | DEBUG    | Learning rate: 0.000100
+2026-02-12 12:56:57 | INFO     |   Metrics: ssim=0.7432, ms_ssim=0.8529, mae=0.0365, gradient_mae=0.1447, psnr=20.1827, ncc=204883044.5947
+2026-02-12 12:56:57 | INFO     | New best validation loss: 0.0586 (prev: 0.0587)
+2026-02-12 12:56:57 | DEBUG    | Saving best model checkpoint to experiments/train_nn1_cropped/msssim+l1_lr1e-4_7ee268/epochs/1
+2026-02-12 12:56:58 | DEBUG    | Saving latest checkpoint
+2026-02-12 12:56:58 | DEBUG    | Stepping scheduler
+2026-02-12 12:56:58 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 3/300 starting
+2026-02-12 12:56:58 | DEBUG    | Starting training epoch 3 with 1102 batches (batch_log_interval=220)
+2026-02-12 12:57:46 | DEBUG    |   Train batch 220/1102: loss=0.0528, time=[min=162.3, avg=164.3, max=174.0]ms
+2026-02-12 12:58:31 | DEBUG    |   Train batch 440/1102: loss=0.0531, time=[min=162.8, avg=169.0, max=202.4]ms
+2026-02-12 12:59:15 | DEBUG    |   Train batch 660/1102: loss=0.0526, time=[min=163.2, avg=168.1, max=190.3]ms
+2026-02-12 12:59:58 | DEBUG    |   Train batch 880/1102: loss=0.0531, time=[min=163.7, avg=174.2, max=191.3]ms
+2026-02-12 13:00:42 | DEBUG    |   Train batch 1100/1102: loss=0.0531, time=[min=163.0, avg=167.5, max=182.4]ms
+2026-02-12 13:00:52 | DEBUG    | Training epoch 3 complete: avg_loss=0.0529, time=233.70s, avg_batch_time=168.6ms
+2026-02-12 13:00:52 | DEBUG    | Starting validation epoch 3 with 276 batches (batch_log_interval=55)
+2026-02-12 13:01:37 | DEBUG    |   Valid batch 55/276: loss=0.0588, time=[min=449.1, avg=452.5, max=476.0]ms
+2026-02-12 13:02:22 | DEBUG    |   Valid batch 110/276: loss=0.0581, time=[min=449.8, avg=471.6, max=495.4]ms
+2026-02-12 13:03:07 | DEBUG    |   Valid batch 165/276: loss=0.0577, time=[min=447.9, avg=462.5, max=490.7]ms
+2026-02-12 13:03:52 | DEBUG    |   Valid batch 220/276: loss=0.0584, time=[min=448.6, avg=452.2, max=480.1]ms
+2026-02-12 13:04:37 | DEBUG    |   Valid batch 275/276: loss=0.0594, time=[min=449.0, avg=464.4, max=515.4]ms
+2026-02-12 13:04:38 | DEBUG    |   Per-crop SSIM: center=0.6967, corners=0.7653, edges=0.7333
+2026-02-12 13:04:38 | DEBUG    | Validation epoch 3 complete: avg_loss=0.0585, time=226.01s, avg_batch_time=460.6ms
+2026-02-12 13:04:38 | DEBUG    | Saving epochs CSV
+2026-02-12 13:04:38 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 3/300 completed: train_loss=0.0529, valid_loss=0.0585, best=0.0586, time=459.71s (train=233.70s, valid=226.01s), run_avg=477.29s (n=3)
+2026-02-12 13:04:38 | DEBUG    | Learning rate: 0.000100
+2026-02-12 13:04:38 | INFO     |   Metrics: ssim=0.7434, ms_ssim=0.8532, mae=0.0364, gradient_mae=0.1446, psnr=20.1872, ncc=212108191.5303
+2026-02-12 13:04:38 | INFO     | New best validation loss: 0.0585 (prev: 0.0586)
+2026-02-12 13:04:38 | DEBUG    | Saving best model checkpoint to experiments/train_nn1_cropped/msssim+l1_lr1e-4_7ee268/epochs/2
+2026-02-12 13:04:38 | DEBUG    | Saving latest checkpoint
+2026-02-12 13:04:39 | DEBUG    | Stepping scheduler
+2026-02-12 13:04:39 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 4/300 starting
+2026-02-12 13:04:39 | DEBUG    | Starting training epoch 4 with 1102 batches (batch_log_interval=220)
+2026-02-12 13:05:27 | DEBUG    |   Train batch 220/1102: loss=0.0532, time=[min=162.1, avg=165.1, max=186.4]ms
+2026-02-12 13:06:10 | DEBUG    |   Train batch 440/1102: loss=0.0528, time=[min=162.7, avg=169.9, max=196.7]ms
+2026-02-12 13:06:53 | DEBUG    |   Train batch 660/1102: loss=0.0529, time=[min=163.1, avg=169.4, max=196.5]ms
+2026-02-12 13:07:35 | DEBUG    |   Train batch 880/1102: loss=0.0530, time=[min=163.1, avg=165.7, max=176.5]ms
+2026-02-12 13:08:18 | DEBUG    |   Train batch 1100/1102: loss=0.0524, time=[min=163.1, avg=165.9, max=181.5]ms
+2026-02-12 13:08:29 | DEBUG    | Training epoch 4 complete: avg_loss=0.0528, time=229.55s, avg_batch_time=167.2ms
+2026-02-12 13:08:29 | DEBUG    | Starting validation epoch 4 with 276 batches (batch_log_interval=55)
+2026-02-12 13:09:14 | DEBUG    |   Valid batch 55/276: loss=0.0589, time=[min=448.1, avg=460.3, max=506.2]ms
+2026-02-12 13:09:58 | DEBUG    |   Valid batch 110/276: loss=0.0583, time=[min=448.7, avg=456.1, max=497.1]ms
+2026-02-12 13:10:44 | DEBUG    |   Valid batch 165/276: loss=0.0578, time=[min=448.4, avg=463.7, max=507.3]ms
+2026-02-12 13:11:29 | DEBUG    |   Valid batch 220/276: loss=0.0584, time=[min=448.2, avg=467.4, max=497.1]ms
+2026-02-12 13:12:14 | DEBUG    |   Valid batch 275/276: loss=0.0596, time=[min=447.7, avg=450.2, max=454.7]ms
+2026-02-12 13:12:15 | DEBUG    |   Per-crop SSIM: center=0.6964, corners=0.7651, edges=0.7331
+2026-02-12 13:12:15 | DEBUG    | Validation epoch 4 complete: avg_loss=0.0586, time=226.23s, avg_batch_time=459.5ms
+2026-02-12 13:12:15 | DEBUG    | Saving epochs CSV
+2026-02-12 13:12:15 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 4/300 completed: train_loss=0.0528, valid_loss=0.0586, best=0.0585, time=455.78s (train=229.55s, valid=226.23s), run_avg=471.91s (n=4)
+2026-02-12 13:12:15 | DEBUG    | Learning rate: 0.000100
+2026-02-12 13:12:15 | INFO     |   Metrics: ssim=0.7432, ms_ssim=0.8529, mae=0.0364, gradient_mae=0.1446, psnr=20.1605, ncc=221387942.1124
+2026-02-12 13:12:15 | DEBUG    | Saving latest checkpoint
+2026-02-12 13:12:15 | DEBUG    | Stepping scheduler
+2026-02-12 13:12:15 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 5/300 starting
+2026-02-12 13:12:15 | DEBUG    | Starting training epoch 5 with 1102 batches (batch_log_interval=220)
+2026-02-12 13:13:04 | DEBUG    |   Train batch 220/1102: loss=0.0524, time=[min=161.8, avg=164.8, max=175.8]ms
+2026-02-12 13:13:47 | DEBUG    |   Train batch 440/1102: loss=0.0530, time=[min=162.9, avg=165.9, max=186.4]ms
+2026-02-12 13:14:30 | DEBUG    |   Train batch 660/1102: loss=0.0526, time=[min=159.4, avg=166.0, max=177.0]ms
+2026-02-12 13:15:12 | DEBUG    |   Train batch 880/1102: loss=0.0530, time=[min=163.1, avg=165.5, max=176.7]ms
+2026-02-12 13:15:55 | DEBUG    |   Train batch 1100/1102: loss=0.0531, time=[min=162.7, avg=166.1, max=208.1]ms
+2026-02-12 13:16:05 | DEBUG    | Training epoch 5 complete: avg_loss=0.0528, time=229.66s, avg_batch_time=165.7ms
+2026-02-12 13:16:05 | DEBUG    | Starting validation epoch 5 with 276 batches (batch_log_interval=55)
+2026-02-12 13:16:50 | DEBUG    |   Valid batch 55/276: loss=0.0590, time=[min=448.3, avg=450.5, max=457.2]ms
+2026-02-12 13:17:34 | DEBUG    |   Valid batch 110/276: loss=0.0584, time=[min=447.9, avg=450.3, max=464.9]ms
+2026-02-12 13:18:18 | DEBUG    |   Valid batch 165/276: loss=0.0578, time=[min=447.5, avg=450.2, max=455.8]ms
+2026-02-12 13:19:03 | DEBUG    |   Valid batch 220/276: loss=0.0586, time=[min=448.2, avg=450.4, max=466.6]ms
+2026-02-12 13:19:48 | DEBUG    |   Valid batch 275/276: loss=0.0595, time=[min=447.6, avg=462.0, max=505.2]ms
+2026-02-12 13:19:49 | DEBUG    |   Per-crop SSIM: center=0.6967, corners=0.7652, edges=0.7333
+2026-02-12 13:19:49 | DEBUG    | Validation epoch 5 complete: avg_loss=0.0587, time=224.24s, avg_batch_time=452.7ms
+2026-02-12 13:19:49 | DEBUG    | Saving epochs CSV
+2026-02-12 13:19:49 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 5/300 completed: train_loss=0.0528, valid_loss=0.0587, best=0.0585, time=453.90s (train=229.66s, valid=224.24s), run_avg=468.31s (n=5)
+2026-02-12 13:19:49 | DEBUG    | Learning rate: 0.000100
+2026-02-12 13:19:49 | INFO     |   Metrics: ssim=0.7434, ms_ssim=0.8528, mae=0.0365, gradient_mae=0.1444, psnr=20.1362, ncc=214803170.3405
+2026-02-12 13:19:49 | DEBUG    | Saving latest checkpoint
+2026-02-12 13:19:50 | DEBUG    | Stepping scheduler
+2026-02-12 13:19:50 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 6/300 starting
+2026-02-12 13:19:50 | DEBUG    | Starting training epoch 6 with 1102 batches (batch_log_interval=220)
+2026-02-12 13:20:38 | DEBUG    |   Train batch 220/1102: loss=0.0522, time=[min=162.1, avg=164.3, max=172.3]ms
+2026-02-12 13:21:20 | DEBUG    |   Train batch 440/1102: loss=0.0529, time=[min=163.2, avg=164.7, max=176.6]ms
+2026-02-12 13:22:03 | DEBUG    |   Train batch 660/1102: loss=0.0533, time=[min=162.9, avg=165.1, max=176.9]ms
+2026-02-12 13:22:44 | DEBUG    |   Train batch 880/1102: loss=0.0528, time=[min=162.8, avg=165.2, max=177.1]ms
+2026-02-12 13:23:27 | DEBUG    |   Train batch 1100/1102: loss=0.0526, time=[min=162.9, avg=165.3, max=186.4]ms
+2026-02-12 13:23:37 | DEBUG    | Training epoch 6 complete: avg_loss=0.0528, time=227.19s, avg_batch_time=164.9ms
+2026-02-12 13:23:37 | DEBUG    | Starting validation epoch 6 with 276 batches (batch_log_interval=55)
+2026-02-12 13:24:22 | DEBUG    |   Valid batch 55/276: loss=0.0590, time=[min=448.4, avg=450.3, max=454.7]ms
+2026-02-12 13:25:06 | DEBUG    |   Valid batch 110/276: loss=0.0583, time=[min=447.8, avg=449.8, max=451.7]ms
+2026-02-12 13:25:50 | DEBUG    |   Valid batch 165/276: loss=0.0579, time=[min=447.8, avg=450.1, max=455.7]ms
+2026-02-12 13:26:36 | DEBUG    |   Valid batch 220/276: loss=0.0586, time=[min=447.5, avg=459.7, max=504.1]ms
+2026-02-12 13:27:22 | DEBUG    |   Valid batch 275/276: loss=0.0596, time=[min=448.6, avg=466.6, max=508.5]ms
+2026-02-12 13:27:22 | DEBUG    |   Per-crop SSIM: center=0.6967, corners=0.7651, edges=0.7332
+2026-02-12 13:27:22 | DEBUG    | Validation epoch 6 complete: avg_loss=0.0587, time=225.28s, avg_batch_time=455.3ms
+2026-02-12 13:27:22 | DEBUG    | Saving epochs CSV
+2026-02-12 13:27:22 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 6/300 completed: train_loss=0.0528, valid_loss=0.0587, best=0.0585, time=452.47s (train=227.19s, valid=225.28s), run_avg=465.67s (n=6)
+2026-02-12 13:27:22 | DEBUG    | Learning rate: 0.000100
+2026-02-12 13:27:22 | INFO     |   Metrics: ssim=0.7433, ms_ssim=0.8531, mae=0.0366, gradient_mae=0.1448, psnr=20.1323, ncc=234432982.4867
+2026-02-12 13:27:22 | DEBUG    | Saving latest checkpoint
+2026-02-12 13:27:23 | DEBUG    | Stepping scheduler
+2026-02-12 13:27:23 | INFO     | [msssim+l1_lr1e-4_7ee268] Epoch 7/300 starting
+2026-02-12 13:27:23 | DEBUG    | Starting training epoch 7 with 1102 batches (batch_log_interval=220)
+2026-02-12 13:28:12 | DEBUG    |   Train batch 220/1102: loss=0.0527, time=[min=161.6, avg=169.9, max=202.1]ms
+2026-02-12 13:28:59 | DEBUG    |   Train batch 440/1102: loss=0.0525, time=[min=162.8, avg=171.9, max=195.7]ms
+2026-02-12 13:29:47 | DEBUG    |   Train batch 660/1102: loss=0.0531, time=[min=162.9, avg=167.7, max=192.0]ms
+2026-02-12 13:30:32 | DEBUG    |   Train batch 880/1102: loss=0.0526, time=[min=162.2, avg=169.1, max=196.5]ms
+2026-02-12 13:31:17 | DEBUG    |   Train batch 1100/1102: loss=0.0523, time=[min=162.3, avg=165.4, max=180.8]ms
+2026-02-12 13:31:28 | DEBUG    | Training epoch 7 complete: avg_loss=0.0527, time=244.28s, avg_batch_time=168.8ms
+2026-02-12 13:31:28 | DEBUG    | Starting validation epoch 7 with 276 batches (batch_log_interval=55)
+2026-02-12 13:32:13 | DEBUG    |   Valid batch 55/276: loss=nan, time=[min=447.9, avg=451.3, max=472.5]ms
+2026-02-12 13:32:58 | DEBUG    |   Valid batch 110/276: loss=nan, time=[min=447.5, avg=453.0, max=483.9]ms
+2026-02-12 13:33:45 | DEBUG    |   Valid batch 165/276: loss=nan, time=[min=447.6, avg=450.5, max=461.6]ms
+2026-02-12 13:34:32 | DEBUG    |   Valid batch 220/276: loss=0.0584, time=[min=447.7, avg=450.0, max=456.2]ms
+2026-02-12 13:35:16 | DEBUG    |   Valid batch 275/276: loss=nan, time=[min=448.4, avg=450.8, max=466.6]ms
+2026-02-12 13:35:17 | DEBUG    |   Per-crop SSIM: center=nan, corners=nan, edges=nan
+2026-02-12 13:35:17 | DEBUG    | Validation epoch 7 complete: avg_loss=nan, time=229.27s, avg_batch_time=451.2ms
+2026-02-12 13:35:17 | ERROR    | [msssim+l1_lr1e-4_7ee268] Validation loss became nan at epoch 7

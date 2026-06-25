@@ -1,0 +1,68 @@
+{
+  "exp_name": "msssim+l1_lr3e-4_f43627",
+  "model": {
+    "type": "unet",
+    "encoder_name": "tu-tf_efficientnetv2_s",
+    "pretrained": true
+  },
+  "loss": {
+    "name": "msssim+l1",
+    "params": {
+      "msssim_weight": 0.2,
+      "l1_weight": 0.8,
+      "data_range": 1.0,
+      "channel": 1
+    }
+  },
+  "scheduler": {
+    "name": "cosine_warmup",
+    "params": {
+      "warmup_epochs": 5,
+      "eta_min": 1e-06
+    }
+  },
+  "optimizer": {
+    "name": "adamw",
+    "params": {
+      "lr": 0.0003,
+      "weight_decay": 0.01
+    }
+  },
+  "batch_size": 64,
+  "num_epochs": 300,
+  "train_size": null,
+  "valid_size": null,
+  "registry_dir": "./experiments",
+  "experiments_dir": "./experiments/train_nn1_cropped",
+  "data_path": "${DATASETS_DIR}/pre/rsna-intracranial-hemorrhage-detection/1x512x512_-20_107",
+  "crop_size": 256,
+  "flip_prob": 0.5,
+  "num_workers": 2,
+  "valid_batch_size": 64,
+  "valid_num_workers": 0,
+  "valid_pin_memory": false,
+  "valid_prefetch_factor": 1,
+  "early_stopping_patience": 15,
+  "early_stopping_delta": 0.0001,
+  "crop_weights": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "include_resize_512": true,
+  "resize_512_weight": 0.5,
+  "include_resize_384": false,
+  "resize_384_weight": 0.5,
+  "rotation_prob": 0.5,
+  "rotation_max_angle": 15.0,
+  "generate_test_viz_real": false,
+  "generate_test_viz_interpolated": false,
+  "init_from_experiment": "msssim+l1_lr3e-4_9b7aea",
+  "init_from_checkpoint": "epochs/18/weights.pth"
+}

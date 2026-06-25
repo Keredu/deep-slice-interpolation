@@ -1,0 +1,122 @@
+[project]
+name = "phd"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = "==3.13.*"
+authors = [
+    { name = "Keredu", email = "luiscortesferre@gmail.com" },
+]
+dependencies = [
+    "python-dotenv~=1.2.1",
+    "torch~=2.10.0",
+    "pydicom~=3.0.1",
+    "pandas~=2.3.3",
+    "matplotlib~=3.10.8",
+    "torchvision~=0.25.0",
+    "plotly~=6.5.2",
+    "scipy~=1.17.0",
+    "ruff~=0.14.14",
+    "timm~=1.0.24",
+    "loguru~=0.7.3",
+    "pytorch-msssim~=1.0.0",
+    "segmentation-models-pytorch~=0.5.0",
+    "pytest~=9.0.2",
+    "pytest-cov~=7.0.0",
+    "lpips>=0.1.4",
+    "gdown",
+    "pypdf>=6.10.2",
+]
+
+[tool.ruff]
+src = ["."]
+line-length = 120
+target-version = "py313"
+exclude = ["notebooks", "old"]
+
+[tool.ruff.lint]
+preview = true # # Enable experimental lint rules
+select = [
+    "E",    # pycodestyle errors
+    "F",    # Pyflakes
+    "W",    # pycodestyle warnings
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "C4",   # flake8-comprehensions
+    "S",    # flake8-bandit
+    "DTZ",  # flake8-datetimez
+    "RUF",  # Ruff-specific rules
+    "ANN",  # flake8-annotations
+    "D",    # pydocstyle
+    "PLE",  # Pylint errors
+    "PLW",  # Pylint warnings
+]
+ignore = [
+    "ANN002",  # Missing type annotation for `*args`
+    "ANN003",  # Missing type annotation for `**kwargs`
+    "D100",  # Missing docstring in public module
+    "D203",  # 1 blank line required before class docstring
+    "D204",  # 1 blank line required after class docstring
+    "D213",  # Multi-line summary second line (conflicts with D212)
+    "D413",  # Missing blank line after last section
+    "N817",  # CamelCase imported as acronym (e.g., ElementTree as ET)
+    "RUF001",  # Ambiguous unicode character (often intentional)
+    "RUF002",  # Ambiguous unicode in docstring
+    "RUF003",  # Ambiguous unicode in comment
+]
+fixable = ["ALL"]  # Fixable rules
+unfixable = []  # Rules that should not be auto-fixed
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/*" = [
+    "S101",  # Assert statements are fine in tests
+    "S108",  # Hardcoded temp paths (ok in tests)
+    ]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 5
+
+[tool.hatch.build.targets.wheel]
+packages = ["phd"]
+
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "--cov=phd",
+    "--cov-report=html",
+    "--cov-report=term",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "gpu: marks tests that require GPU",
+    "integration: marks integration tests",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
+[tool.coverage.run]
+source = ["phd"]
+omit = ["*/test_*.py", "*/__pycache__/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]

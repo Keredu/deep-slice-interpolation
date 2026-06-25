@@ -1,0 +1,76 @@
+# Local configuration
+.env
+.env.*
+!.env.example
+!example.env
+
+# Python environments and caches
+.venv/
+venv/
+*venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Editor and assistant-local files
+.vscode/
+.idea/
+.claude/
+.codex/
+.agents/
+CLAUDE.md
+AGENTS.md
+**/CLAUDE.md
+**/AGENTS.md
+
+# Generated outputs
+output/
+results/
+experiments_report.html
+experiments/**/experiments_report.html
+experiments/**/epochs/**/viz/
+experiments/**/crash_trace.txt
+experiments/**/stderr.log
+experiments/**/error.log
+
+# Heavy training artifacts
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Generated imaging/data payloads
+*.dcm
+*.nii
+*.nii.gz
+datasets/raw/
+datasets/pre/rsna-intracranial-hemorrhage-detection/1x512x512_-20_107/
+!datasets/pre/rsna-intracranial-hemorrhage-detection/df.csv
+
+# Generated plots/logs not explicitly tracked
+*.png
+training.log
+
+# Selected lightweight training artifacts included for reproducibility
+!experiments/train_nn1_cropped/ssim_lr3e-3_94f982/training.log
+!experiments/train_nn1_cropped/ssim_lr3e-3_94f982/loss_curves.png
+!experiments/train_nn1_cropped/ssim+l1_lr8e-4_1fa946/training.log
+!experiments/train_nn1_cropped/ssim+l1_lr8e-4_1fa946/loss_curves.png
+!experiments/train_nn1_cropped/l1_lr8e-4_b39be9/training.log
+!experiments/train_nn1_cropped/l1_lr8e-4_b39be9/loss_curves.png
+!experiments/train_nn1_cropped/mse_lr8e-4_b558b9/training.log
+!experiments/train_nn1_cropped/mse_lr8e-4_b558b9/loss_curves.png
+!experiments/train_nn1_cropped/msssim+l1_lr1e-4_7ee268/training.log
+!experiments/train_nn1_cropped/msssim+l1_lr1e-4_7ee268/loss_curves.png
+
+# Internal/private source trees that should not be published here
+paper_latex/
+paper_medical_image_analysis/
+future/
+vendor/
+reader_study/
+notebooks/
